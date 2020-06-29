@@ -1,0 +1,102 @@
+.about {
+    background-color: #000;
+    position: relative;
+    .row {
+        display: flex;
+        flex-wrap: inherit;
+        overflow: hidden;
+        min-height: 100%;
+        position: absolute;
+        top: 0;
+        padding: 0;
+
+        width: 100%;
+        @media (max-width: 991px) {
+            flex-wrap: wrap;
+            position: inherit;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 5%;
+            h3 {
+                color: #fff;
+                font-family: Poppins;
+                font-size: 60px;
+                margin: 10px 0 20px 0;
+                line-height: 60px;
+                font-weight: 800;
+                @media (max-width: 991px) {
+                    font-size: 30px;
+                    line-height: 30px;
+                }
+                @media (min-width: 768px) and (max-width: 1024px) {
+                    font-size: 50px;
+                    line-height: 50px;
+                }
+            }
+            p {
+                color: #eee;
+                font-family: Poppins;
+                font-size: 15px;
+                margin-top: 20px;
+                font-weight: 300;
+            }
+            .social_icons {
+                .social_icon {
+                    font-size: 28px;
+                    color: #fff;
+                    margin-right: 15px;
+                    transition: 0.2s;
+                    cursor: pointer;
+                    &:hover {
+                        color: #eb83f8;
+                    }
+                }
+            }
+        }
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 5%;
+            position: relative;
+            overflow: hidden;
+            background: -webkit-linear-gradient(left, rgba(160, 50, 115, 1) 0%, rgba(117, 58, 136, 1) 100%);
+            background: -o-linear-gradient(left, rgba(160, 50, 115, 1) 0%, rgba(117, 58, 136, 1) 100%);
+            background: -ms-linear-gradient(left, rgba(160, 50, 115, 1) 0%, rgba(117, 58, 136, 1) 100%);
+            background: linear-gradient(to right, rgba(160, 50, 115, 1) 0%, rgba(117, 58, 136, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc2b5e', endColorstr='#753a88', GradientType=1 );
+            @media (max-width: 991px) {
+                width: 100%;
+            }
+            h5 {
+                font-family: Poppins;
+                font-weight: 700;
+                color: #fff;
+                font-size: 40px;
+                margin-bottom: 0;
+            }
+            .separator {
+                margin: 20px 0;
+            }
+            .skills-container {
+                z-index: 1;
+                max-width: 80%;
+                @media (max-width: 991px) {
+                    max-width: 100%;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    .particles {
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        @media (max-width: 991px) {
+            width: 100%;
+        }
+    }
+}
