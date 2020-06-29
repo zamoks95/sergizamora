@@ -64,7 +64,24 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-offline',
-    'gatsby-plugin-preact'
+    'gatsby-plugin-preact',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-87579900-6",
+        head: true,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: [""],
+        // Delays sending pageview hits on route update (in milliseconds)
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "sergizamora.com",
+      },
+    },
 
   ],
 }
