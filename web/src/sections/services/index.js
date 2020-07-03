@@ -17,7 +17,7 @@ import Counter from 'components/counter'
 import ThemeContext from '../../context'
 import './styles.scss'
 
-class Services extends React.Component {
+class Privacy extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -250,4 +250,4 @@ class Services extends React.Component {
   }
 }
 
-export default Services
+export default Privacy
