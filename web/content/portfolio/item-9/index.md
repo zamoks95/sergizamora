@@ -2,7 +2,7 @@
 id: 9
 image: './image.jpg'
 title: "everyWAN"
-description: "Cinesa Se Mueve"
+description: "everyWAN"
 link: "https://everywan.com"
 category: "Agency Pages"
 ---

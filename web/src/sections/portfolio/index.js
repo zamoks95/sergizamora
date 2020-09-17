@@ -123,8 +123,8 @@ class Portfolio extends React.Component {
                     <div className="overlay">
                       <span className="title">
                         {value.content.frontmatter.title}
-                        <p>{value.content.frontmatter.description}</p>
-                        <a href={value.content.frontmatter.link}>Visit Website</a>
+                        <br/>
+                        <a href={value.content.frontmatter.link} target="_blank" style={{color: 'white'}}>Visit Website</a>
                       </span>
                     </div>
                   </Tilt>
@@ -197,7 +197,6 @@ export default props => (
                     title
                     category
                     link
-                    description
                     image {
                       childImageSharp {
                         fluid(maxWidth: 2000, maxHeight: 2000) {
