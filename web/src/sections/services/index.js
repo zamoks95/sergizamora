@@ -1,35 +1,37 @@
-import React from 'react'
-import { Row, Col, Container } from 'react-bootstrap'
-import BaffleText from 'components/baffle-text'
-import AnimationContainer from 'components/animation-container'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact, faAngular, faAws } from '@fortawesome/free-brands-svg-icons'
+import React from "react";
+import { Row, Col, Container } from "react-bootstrap";
+import BaffleText from "components/baffle-text";
+import AnimationContainer from "components/animation-container";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faReact } from "@fortawesome/free-brands-svg-icons";
 import {
   faPencilRuler,
-  faServer,
-  faRobot,
   faSmileBeam,
   faCoffee,
   faTrophy,
   faCode,
-} from '@fortawesome/free-solid-svg-icons'
-import Counter from 'components/counter'
-import ThemeContext from '../../context'
-import './styles.scss'
+  faTabletAlt,
+  faSignLanguage,
+  faFireAlt,
+  faDragon,
+} from "@fortawesome/free-solid-svg-icons";
+import Counter from "components/counter";
+import ThemeContext from "../../context";
+import "./styles.scss";
 
 class Privacy extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       show: false,
-    }
-    this.show = this.show.bind(this)
+    };
+    this.show = this.show.bind(this);
   }
 
-  static contextType = ThemeContext
+  static contextType = ThemeContext;
 
   show() {
-    this.setState({ show: true })
+    this.setState({ show: true });
   }
 
   render() {
@@ -43,9 +45,9 @@ class Privacy extends React.Component {
           className="top"
           style={{
             maxHeight:
-              this.context.height !== 'auto'
+              this.context.height !== "auto"
                 ? this.context.height * 0.8
-                : 'inherit',
+                : "inherit",
           }}
         >
           <div className="content">
@@ -66,9 +68,9 @@ class Privacy extends React.Component {
                 className="services_container"
                 style={{
                   minHeight:
-                    this.context.height !== 'auto'
+                    this.context.height !== "auto"
                       ? this.context.height * 0.6
-                      : 'inherit',
+                      : "inherit",
                 }}
               >
                 <Container>{this.services()}</Container>
@@ -78,11 +80,11 @@ class Privacy extends React.Component {
         </Row>
         <Row className="bottom">{this.counters()}</Row>
       </section>
-    )
+    );
   }
 
   services() {
-    if (this.state.show || this.context.height === 'auto') {
+    if (this.state.show || this.context.height === "auto") {
       return (
         <Row>
           <Col md={4} className="service">
@@ -92,41 +94,38 @@ class Privacy extends React.Component {
               </div>
               <h4>Front-end React</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
+                I like to develop using react due to its modularity,
+                scalability, and optimization. I also think it one of the best
+                frontend frameworks due to its large number of plugins and
+                community it has.
               </p>
             </AnimationContainer>
           </Col>
           <Col md={4} className="service border-side">
             <AnimationContainer delay={400} animation="fadeInDown fast">
               <div className="icon">
-                <FontAwesomeIcon icon={faAngular} />
+                <FontAwesomeIcon icon={faTabletAlt} />
               </div>
-              <h4>Angular Web App</h4>
+              <h4>Hybrid Apps</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
+                I think that you don't need to develop the same app for every
+                operating system.
+                <br />
+                You can get faster results by developing hybrid apps.
               </p>
             </AnimationContainer>
           </Col>
           <Col md={4} className="service">
             <AnimationContainer delay={600} animation="fadeInRight fast">
               <div className="icon">
-                <FontAwesomeIcon icon={faAws} />
+                <FontAwesomeIcon icon={faSignLanguage} />
               </div>
-              <h4>AWS Management</h4>
+              <h4>Accessibility Products</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
+                One of the points that I'm most concerned about when developing
+                a new product Is to take an important focus on usability and
+                accessibility because I want that every person has a good
+                experience using any of my products.
               </p>
             </AnimationContainer>
           </Col>
@@ -137,53 +136,50 @@ class Privacy extends React.Component {
               </div>
               <h4>UI/UX Design</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
+                A proper UI & UX are a MUST DO in every one of my projects.
+                <br />
+                If a client isn't satisfied with how the product works or has
+                problems using it, I don't feel comfortable publishing it
+                because it means that my solution isn't good enough.
               </p>
             </AnimationContainer>
           </Col>
           <Col md={4} className="service border-side">
             <AnimationContainer delay={1000} animation="fadeInUp fast">
               <div className="icon">
-                <FontAwesomeIcon icon={faServer} className="solid" />
+                <FontAwesomeIcon icon={faFireAlt} className="solid" />
               </div>
-              <h4>Linux Server Management</h4>
+              <h4>Hot Stuff</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
+                I try to develop and create personal and unique products.
+                <br />
+                To achieve that, I am learning new methodologies and frameworks
+                every day.
               </p>
             </AnimationContainer>
           </Col>
           <Col md={4} className="service">
             <AnimationContainer delay={1200} animation="fadeInRight fast">
               <div className="icon">
-                <FontAwesomeIcon icon={faRobot} className="solid" />
+                <FontAwesomeIcon icon={faDragon} className="solid" />
               </div>
-              <h4>Artifical Intelligence</h4>
+              <h4>Videogames</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                dui sem, vulputate vitae dolor sed, sollicitudin pharetra nisi.
-                In et sem libero. Integer pretium, tellus eu pellentesque
-                tristique, ex libero maximus elit, mollis tristique urna eros
-                non tellus
+                Every product has its own history, as well as me.
+                <br />I try to create products that make me experience that I
+                can have full interaction with it, as well as videogames do.
               </p>
             </AnimationContainer>
           </Col>
         </Row>
-      )
+      );
     }
   }
 
   counters() {
     /* Date Difference Manager - Start */
     function parseDate(str) {
-      var mdy = str.split('/');
+      var mdy = str.split("/");
       return new Date(mdy[2], mdy[0] - 1, mdy[1]);
     }
 
@@ -191,13 +187,13 @@ class Privacy extends React.Component {
       return Math.round((second - first) / (1000 * 60 * 60 * 24));
     }
     var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(new Date().getMonth() + 1).padStart(2, '0'); //January is 0!
+    var dd = String(today.getDate()).padStart(2, "0");
+    var mm = String(new Date().getMonth() + 1).padStart(2, "0"); //January is 0!
     var yyyy = new Date().getFullYear();
-    today = mm + '/' + dd + '/' + yyyy;
+    today = mm + "/" + dd + "/" + yyyy;
     /* Date Difference Manager - End */
 
-    if (this.state.show || this.context.height === 'auto') {
+    if (this.state.show || this.context.height === "auto") {
       return (
         <Container>
           <Col md={3}>
@@ -227,7 +223,7 @@ class Privacy extends React.Component {
               <Counter
                 icon={faTrophy}
                 value={16}
-                text="Projectes Completed"
+                text="Projects Completed"
                 symbol="+"
                 duration={3}
               />
@@ -245,9 +241,9 @@ class Privacy extends React.Component {
             </AnimationContainer>
           </Col>
         </Container>
-      )
+      );
     }
   }
 }
 
-export default Privacy
+export default Privacy;

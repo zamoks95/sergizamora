@@ -1,13 +1,13 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
-import LayoutPrivacy from 'components/layoutPrivacy'
+import LayoutPortfolio from 'components/LayoutPortfolio'
 import Spinner from 'components/spinner'
-import Privacy from 'sections/privacy'
+import PortfolioRmkbl from 'sections/portfolioContent/PortfolioRmkbl'
 import { VerticleButton as ScrollUpButton } from "react-scroll-up-button"; //Add this line Here
 import CookieConsent from "react-cookie-consent";
 
-class PrivacyPage extends React.Component {
+class RkmblPage extends React.Component {
 
   render() {
     const { site } = this.props.data
@@ -15,12 +15,12 @@ class PrivacyPage extends React.Component {
       <>
         <div>
           <Helmet>
-            <title>{site.meta.title} | Privacy</title>
+            <title>{site.meta.title} | Remarkable</title>
             <meta name="description" content={site.meta.description} />
           </Helmet>
-          <LayoutPrivacy>
-            <Privacy id="privacy" />
-          </LayoutPrivacy>
+          <LayoutPortfolio>
+            <PortfolioRmkbl id="privacy" />
+          </LayoutPortfolio>
           <Spinner duration={250} />
         </div>
         <ScrollUpButton style={{ backgroundColor: "black", borderRadius: "2px" }} />
@@ -43,7 +43,7 @@ class PrivacyPage extends React.Component {
   }
 }
 
-export default PrivacyPage
+export default RkmblPage
 
 export const pageQuery = graphql`
   query {

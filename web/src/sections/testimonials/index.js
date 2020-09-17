@@ -30,7 +30,7 @@ class Testimonials extends React.Component {
     return (
       <section
         id={`${this.props.id}`}
-        className="testimonials"
+        className="quotes"
         style={{ height: this.context.height }}
       >
         <Row
@@ -45,11 +45,11 @@ class Testimonials extends React.Component {
           <div className="content">
             <Col md={12}>
               <div className="line-text">
-                <h4>Testimonials</h4>
+                <h4>Quotes</h4>
               </div>
               <div className="heading">
                 <BaffleText
-                  text="Reviews by Clients"
+                  text="Personal Thoughts"
                   revealDuration={500}
                   revealDelay={500}
                   parentMethod={this.show}
@@ -125,22 +125,6 @@ class Testimonials extends React.Component {
                 __html: value.content.html,
               }}
             />
-            <div className="client_container">
-              <div className="client">
-                <img
-                  src={
-                    value.content.frontmatter.image.childImageSharp.fluid.src
-                  }
-                  alt={value.content.frontmatter.name}
-                />
-                <div className="info">
-                  <p className="name">{value.content.frontmatter.name}</p>
-                  <p className="profession">
-                    {value.content.frontmatter.profession}
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         )
       })

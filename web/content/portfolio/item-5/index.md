@@ -1,6 +1,8 @@
 ---
 id: 5
 image: './image.jpg'
-title: "UI Deisgn for Company"
-category: "UI/UX Design"
+title: "Lacasa - History"
+description: "Cinesa Se Mueve"
+link: "https://lacasa.es/#desde1852"
+category: "Landing Pages"
 ---

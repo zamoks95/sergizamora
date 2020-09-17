@@ -1,6 +1,8 @@
 ---
-id: 6
+id: 7
 image: './image.jpg'
-title: "UX Development for Company"
-category: "UI/UX Design"
+title: "Grupo Lacasa"
+description: "Cinesa Se Mueve"
+link: "https://grupo.lacasa.es/"
+category: "Full Website"
 ---

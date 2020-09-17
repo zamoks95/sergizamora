@@ -11,17 +11,17 @@ class Portfolio extends React.Component {
     super(props)
     const { items } = this.props
     this.state = {
-      category: null,
+      category: "Landing Pages",
       col:
         items.length > 6
           ? 4
           : items.length > 4
-          ? 3
-          : items.length > 3
-          ? 2
-          : items.length > 1
-          ? 2
-          : 1,
+            ? 3
+            : items.length > 3
+              ? 2
+              : items.length > 1
+                ? 2
+                : 1,
       items: this.props.items,
       showPortfolio: false,
     }
@@ -54,14 +54,6 @@ class Portfolio extends React.Component {
           </Col>
           <Col md={10} className="recent-works">
             <div className="portfolio_selector">
-              <button
-                className="portfolio_category"
-                onClick={() => this.changeCategory(null)}
-              >
-                <span className={`${!this.state.category ? 'active' : ''}`}>
-                  All
-                </span>
-              </button>
               {this.categories()}
             </div>
 
@@ -101,12 +93,12 @@ class Portfolio extends React.Component {
                     this.context.height === 'auto'
                       ? '100%'
                       : this.state.col === 4
-                      ? '25%'
-                      : this.state.col === 3
-                      ? '33.3%'
-                      : this.state.col === 2
-                      ? '50%'
-                      : '100%',
+                        ? '25%'
+                        : this.state.col === 3
+                          ? '33.3%'
+                          : this.state.col === 2
+                            ? '50%'
+                            : '100%',
                 }}
                 key={index}
               >
@@ -121,16 +113,18 @@ class Portfolio extends React.Component {
                         (this.state.col >= 3
                           ? 0.35
                           : this.getItemCount(
-                              value.content.frontmatter.category
-                            ) === 4
-                          ? 0.36
-                          : 1)}px`,
+                            value.content.frontmatter.category
+                          ) === 4
+                            ? 0.36
+                            : 1)}px`,
                     }}
                   />
                   <Tilt className="Tilt" options={{ scale: 1, max: 50 }}>
                     <div className="overlay">
                       <span className="title">
                         {value.content.frontmatter.title}
+                        <p>{value.content.frontmatter.description}</p>
+                        <a href={value.content.frontmatter.link}>Visit Website</a>
                       </span>
                     </div>
                   </Tilt>
@@ -180,7 +174,7 @@ class Portfolio extends React.Component {
           className="portfolio_category"
           onClick={() => this.changeCategory(value)}
           key={index}
-        > 
+        >
           <span className={`${this.state.category === value ? 'active' : ''}`}>
             {value}
           </span>
@@ -194,9 +188,7 @@ export default props => (
   <StaticQuery
     query={graphql`
           query {
-            items: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(portfolio)/"}}, sort: {fields: [frontmatter___id], order: ASC}, 
-            # The layout is built for 6 portfolio items #
-            limit: 6) {
+            items: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(portfolio)/"}}, sort: {fields: [frontmatter___id], order: ASC}) {
               edges {
                 content: node {
                   html
@@ -204,6 +196,8 @@ export default props => (
                     id
                     title
                     category
+                    link
+                    description
                     image {
                       childImageSharp {
                         fluid(maxWidth: 2000, maxHeight: 2000) {

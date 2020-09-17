@@ -1,8 +1,10 @@
 ---
 id: 1
 image: './image.jpg'
-heading: 'Great Service'
-name: 'Robert Doe'
-profession: 'Software Engineer'
+heading: 'A Focus on Accessibility'
+name: 'Sergi Zamora'
+profession: 'Frontend Developer'
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquet elit quam, et finibus leo feugiat quis. Ut in turpis vitae elit dapibus porta vel vitae justo. Fusce ut nisi blandit, pellentesque metus sed, hendrerit nisi. Duis aliquam ante non velit molestie, et laoreet enim consectetur. Duis rutrum mollis velit, id maximus elit finibus vel. Vestibulum ex sapien, pellentesque id finibus non, elementum bibendum ex. Curabitur vitae felis posuere, luctus lorem imperdiet, ultrices libero. Duis blandit venenatis felis, vitae vulputate mi. Aliquam vitae egestas tortor, eu congue ex. 
+I think it is vitally important to put great focus on the accessibility of a product.
+By this, I mean that you have to use proper layout practices using the corresponding tags for each section.
+It is also necessary to use correct colors so that all the content is usable for all the clients
