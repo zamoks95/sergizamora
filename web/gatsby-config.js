@@ -11,7 +11,7 @@ module.exports = {
       options: {
         trackingId: "UA-87579900-6",
         head: true,
-        cookieDomain: "sergizamora.com",
+        cookieDomain: "https://sergizamora.com",
       },
     },
     {
